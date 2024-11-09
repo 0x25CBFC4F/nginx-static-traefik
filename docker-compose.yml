@@ -9,5 +9,5 @@ services:
       - "./static:/usr/share/nginx/html:ro"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.containers.rule=Host(`${INSTANCE_NAME}.voids.site`)"
+      - "traefik.http.routers.docs_${INSTANCE_NAME}.rule=Host(`${INSTANCE_NAME}.voids.site`)"
       - "traefik.docker.network=proxy"
